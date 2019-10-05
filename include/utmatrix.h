@@ -113,14 +113,15 @@ bool TVector<ValType>::operator==(const TVector &v) const
 
 template <class ValType> // сравнение
 bool TVector<ValType>::operator!=(const TVector &v) const
-{
+{/*
 	if (Size != v.Size && StartIndex != v.StartIndex)
 		return true;
 
 	for (int i = StartIndex; i < Size; ++i)
 		if (pVector[i] != v.pVector[i])
 			return true;
-	return false;
+	return false;*/
+	return !(*this == v);
 
 } /*-------------------------------------------------------------------------*/
 
